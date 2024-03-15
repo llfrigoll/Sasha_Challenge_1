@@ -29,20 +29,20 @@ const STATUS_MAP = {
 
 // Edit below line 
 
-status = selector(status)
-reserve = selector(reserve)
-checkout = selector(checkout)
-checkin = selector(checkin)
+const status_b1 = document.querySelector('#book1 > .status');
+const reserve_b1 = document.querySelector('#book1 > .reserve');
+const checkout_b1 = document.querySelector('#book1 > .checkout');
+const checkin_b1 = document.querySelector('#book1 > .checkin');
 
-status = selector(status)
-reserve = selector(reserve)
-checkout = selector(checkout)
-checkin = selector(checkin)
+const status_b2 = document.querySelector('#book2 > .status');
+const reserve_b2 = document.querySelector('#book2 > .reserve');
+const checkout_b2 = document.querySelector('#book2 > .checkout');
+const checkin_b2 = document.querySelector('#book2 > .checkin');
 
-status = selector(status)
-reserve = selector(reserve)
-checkout = selector(checkout)
-checkin = selector(checkin)
+const status_b3 = document.querySelector('#book3 > .status');
+const reserve_b3 = document.querySelector('#book3 > .reserve');
+const checkout_b3 = document.querySelector('#book3 > .checkout');
+const checkin_b3 = document.querySelector('#book3 > .checkin');
 
 checkin.0.color = none
 status.0.style.color = STATUS_MAP.status.color
