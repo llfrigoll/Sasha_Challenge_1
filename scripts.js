@@ -61,8 +61,10 @@ checkin_b1.disabled = STATUS_MAP[status_b1.textContent].canCheckIn ? 'enabled' :
 //checkout.1 = STATUS_MAP.status.canCheckout ? 'enabled' : 'disabled'
 //checkin.1 = STATUS_MAP.status.canCheckIn ? 'enabled' : 'disabled'
 
-//checkin.2.color = none
-//status.2.style.color = STATUS_MAP.status.color
-//reserve.2 = STATUS_MAP.status.canReserver ? 'enabled' : 'disabled'
-//checkout.2 = STATUS_MAP.status.canCheckout ? 'enabled' : 'disabled'
-//checkin.2 = STATUS_MAP.status.canCheckIn ? 'enabled' : 'disabled'
+//Book3
+// Update properties of Book 3 based on its status
+checkin_b3.style.color = 'grey';
+status_b3.style.color = STATUS_MAP[status_b3.textContent].color;
+reserve_b3.enabled= STATUS_MAP[status_b3.textContent].canReserve ? 'enabled' : 'disabled';
+checkout_b3.enabled = STATUS_MAP[status_b3.textContent].canCheckout ? 'enabled' : 'disabled';
+checkin_b3.disabled = STATUS_MAP[status_b3.textContent].canCheckIn ? 'enabled' : 'disabled';
