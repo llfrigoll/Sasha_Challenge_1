@@ -28,6 +28,10 @@ const STATUS_MAP = {
 }
 
 // Edit below line 
+function selector(className) {
+    return document.getElementsByClassName(className);
+  }
+
 
 //Each const grabs each status and relevant buttons per book
 const status_b1 = document.querySelector('#book1 > p > .status');
@@ -35,10 +39,7 @@ const reserve_b1 = document.querySelector('#book1 > .reserve');
 const checkout_b1 = document.querySelector('#book1 > .checkout');
 const checkin_b1 = document.querySelector('#book1 > .checkin');
 
-const status_b2 = document.querySelector('#book2 > p > .status');
-const reserve_b2 = document.querySelector('#book2 > .reserve');
-const checkout_b2 = document.querySelector('#book2 > .checkout');
-const checkin_b2 = document.querySelector('#book2 > .checkin');
+
 
 const status_b3 = document.querySelector('#book3 > p > .status');
 const reserve_b3 = document.querySelector('#book3 > .reserve');
@@ -54,6 +55,19 @@ status_b1.style.color = STATUS_MAP[status_b1.textContent].color;
 reserve_b1.disabled = STATUS_MAP[status_b1.textContent].canReserve ? 'enabled' : 'disabled';
 checkout_b1.disabled = STATUS_MAP[status_b1.textContent].canCheckout ? 'enabled' : 'disabled';
 checkin_b1.disabled = STATUS_MAP[status_b1.textContent].canCheckIn ? 'enabled' : 'disabled';
+
+
+// Accessing DOM elements for the second book
+let status = selector("status");
+let reserve = selector("reserve");
+let checkout = selector("checkout");
+let checkin = selector("checkin");
+
+// Updating properties and styles for the second book
+status[1].style.color = STATUS_MAP.reserved.color;
+reserve[1].disabled = !STATUS_MAP.reserved.canReserve;
+checkout[1].disabled = !STATUS_MAP.reserved.canCheckout;
+checkin[1].disabled = !STATUS_MAP.reserved.canCheckIn;
 
 //checkin.1.color = none
 //status.1.style.color = STATUS_MAP.status.color
